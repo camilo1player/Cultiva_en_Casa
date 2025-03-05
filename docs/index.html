@@ -1,82 +1,44 @@
 <!DOCTYPE html>
 <html lang="es-CO">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Inicio - Huerto Urbano</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Cultiva en Casa es el foro ideal para conectar con profesionales y expertos en huertos urbanos. Obtén ayuda, comparte tus experiencias y aprende cómo cultivar tus propios alimentos en espacios reducidos. Únete a nuestra comunidad y empieza a cultivar en casa hoy mismo.">
+
+
+  <title>Iniciar sesión - Cultiva en Casa</title>
+
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./public/img/emblemaorg.jpg" type="image/x-icon">
+  <script type="module" src="./login.js" defer></script>
 
 </head>
 <body>
-  <header><!--encabezado de la pagina-->
-    <img src="./img/img/emblema cultiva en casa.JPG" alt="logo">
-    <h1>Cultiva en Casa</h1>
-    <ul>
-        <a href="./01-biblioteca/index.html"><li>Biblioteca de Cultivos</li></a>
-        <a href="./04-bitácora/index.html"><li>Registro y Seguimiento</li></a>
-        <a href="./02-asesoría/index.html"><li>Asesoría</li></a>
-        <a href="./03-foro/index.html"><li>Foro</li></a>
-    </ul>
-    <nav><!--(navigater)donde se ponen los enlaces principales e la web para botones y demas-->
-        <ul>
-            <a href="">
-              <li>Inicar Sesión</li>
-            </a>
-            <a href="">
-              <li>Registrarse</li>
-            </a>
-        </ul>
-    </nav>
-</header>
+  <main>
+    <div class="form-container">
+      <div class="banner">
+        <h1>Iniciar sesión con Cultiva en Casa</h1>
+        <img src="./public/img/emblemaorg.jpg" alt="logo empresarial" class="logo-cultiva">
+      </div>
+      
+      <form id="loginForm"> <!-- Modificado el id para coincidir con el script -->
+        <label>
+          <input type="email" name="email" id="loginEmail" placeholder="Correo de usuario" autocomplete="email" required>
+        </label>
 
-  <main class="main-content">
-    <section id="home" class="tab-content active">
-      <h2>Cultiva tus propios alimentos en casa</h2>
-      <p>Aprende, cultiva y comparte experiencias en nuestra comunidad de agricultura urbana</p>
-    </section>
+        <label>
+          <input type="password" name="password" id="loginPassword" placeholder="Contraseña" required>
+        </label>
+        
+        <button type="submit" id="go-home">Iniciar sesión</button>
+        
+        <p class="error escondido" id="login-error-message">Error al iniciar sesión</p>
+      </form>
+      
+      <p>¿Todavía no tienes una cuenta? - <a href="./pages/0-registro/register.html">Registrate</a></p>
+    </div>
   </main>
-
-  <div class="modal">
-    <div class="modal-content">
-      <h2>Iniciar Sesión</h2>
-      <form id="loginForm">
-        <div class="form-group">
-          <label for="loginEmail">Correo Electrónico</label>
-          <input type="email" id="loginEmail" required>
-        </div>
-        <div class="form-group">
-          <label for="loginPassword">Contraseña</label>
-          <input type="password" id="loginPassword" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-      </form>
-    </div>
-  </div>
-
-  <div id="registerModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('register')">&times;</span>
-      <h2>Registrarse</h2>
-      <form id="registerForm" onsubmit="handleRegister(event)">
-        <div class="form-group">
-          <label for="registerName">Nombre Completo</label>
-          <input type="text" id="registerName" required>
-        </div>
-        <div class="form-group">
-          <label for="registerEmail">Correo Electrónico</label>
-          <input type="email" id="registerEmail" required>
-        </div>
-        <div class="form-group">
-          <label for="registerPassword">Contraseña</label>
-          <input type="password" id="registerPassword" required>
-        </div>
-        <div class="form-group">
-          <label for="registerConfirmPassword">Confirmar Contraseña</label>
-          <input type="password" id="registerConfirmPassword" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Registrarse</button>
-      </form>
-    </div>
-  </div>
-  <script  src=""></script>
 </body>
+</html>

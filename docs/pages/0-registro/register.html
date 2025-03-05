@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="../docs/public/img/emblemaorg.jpg" type="image/x-icon">
+  <title>Registro - Cultiva en Casa</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./auth.js" defer></script>
+
+</head>
+<body>
+  <main>
+    <div class="form-container">
+
+      <div class="banner">
+        <h1>Crear cuenta en Cultiva en Casa</h1>
+        <img src="../../public/img/emblemaorg.jpg" alt="logo empresarial" class="logo-cultiva">
+      </div>
+
+      <p class="bienvenida">Crea tu cuenta para acceder a todos nuestros servicios.</p>
+      <form id="registerForm"> <!-- Modificado de register-form a registerForm -->
+        <label for="registerName" class="sr-only">Nombre</label>
+        <input type="text" name="name" id="registerName" placeholder="Nombre de usuario" required>
+
+        <label for="registerEmail" class="sr-only">Email</label>
+        <input type="email" name="email" id="registerEmail" placeholder="Correo electrónico" required>
+
+        <label for="identidad" class="sr-only">CC/TI</label>
+        <input type="number" name="cedula" id="identidad" placeholder="Cédula">
+
+        <label for="registerPassword" class="sr-only">Contraseña</label>
+        <input type="password" name="password" id="registerPassword" placeholder="Contraseña" required>
+
+        <label for="registerPassword2" class="sr-only">Repetir Contraseña</label>
+        <input type="password" name="password2" id="registerPassword2" placeholder="Repita la contraseña" required>
+
+        <button type="submit">Registrarse</button>
+        <p class="error escondido" id="register-error-message">Error al registrarse</p>
+      </form>
+      <p>¿Ya estás registrado? - <a href="../../index.html">Inicia sesión</a></p>
+    </div>
+</main>
+
+</body>
+</html>
